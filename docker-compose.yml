@@ -3,7 +3,7 @@ services:
     image: ${DOCKER_WORDPRESS_DB_IMAGE:-mysql}:${DOCKER_WORDPRESS_DB_VERSION:-lts}
     container_name: ${DOCKER_WORDPRESS_DB_CONTAINER_NAME}
     restart: unless-stopped
-    command: --authentication_policy=mysql_native_password
+    command: --mysql-native-password=ON
     deploy:
       resources:
         limits:
